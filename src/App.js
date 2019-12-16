@@ -1,18 +1,18 @@
 import React from 'react';
+import { ApolloProvider } from "@apollo/react-hooks";
+
 import AppNavigation from './framework/AppNavigation';
 import 'react-native-gesture-handler';
 import {AuthProvider} from './context/AuthProvider';
-import {LoaderProvider} from './context/LoaderProvider';
-import Loader from './abstraction/Loader';
+import apolloClient from './Adapters/getClient';
 
 const App = () => {
   return (
-    <AuthProvider>
-      <LoaderProvider>
-        <Loader />
-        <AppNavigation />
-      </LoaderProvider>
-    </AuthProvider>
+    <ApolloProvider client={apolloClient}>
+      <AuthProvider>
+        <AppNavigation/>
+      </AuthProvider>
+    </ApolloProvider>
   );
 };
 

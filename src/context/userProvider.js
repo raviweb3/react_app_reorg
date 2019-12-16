@@ -2,9 +2,7 @@ import React, {useReducer, useMemo} from 'react';
 import PropTypes from 'prop-types';
 
 const initialState = {
-  user: {
-    parent: false,
-  },
+  userData: {},
 };
 
 const initialContext = [{...initialState}, () => {}];

@@ -1,20 +1,24 @@
 import React, {useEffect} from 'react';
 import SplashScreen from '../Entities/Splash/SplashScreen';
 import {AuthContext} from '../context/AuthProvider';
-import {UserContext} from '../context/userProvider';
+import {navigate} from '../framework/NavigationService';
+import {LoaderContext} from '../context/LoaderProvider';
 
-const SplashContainer = ({navigation}) => {
-  const [authState, updateAuth] = React.useContext(AuthContext);
-  const [userState, updateUser] = React.useContext(UserContext);
-
-  console.log('splash auth:', authState, updateAuth);
-  console.log('splash user:', userState, updateUser);
+const SplashContainer = () => {
+  // const [authState] = React.useContext(AuthContext);
+  // const [loaderState, updateLoader] = React.useContext(LoaderContext);
+  console.log('splashcontainer');
+  // updateLoader(true);
 
   useEffect(() => {
     setTimeout(() => {
-      if (authState.loggedIn) navigation.navigate('Home');
-      else navigation.navigate('Auth');
-    }, 3000);
+      if (authState.loggedIn) {
+        navigate('Home');
+      } else {
+        // updateLoader({loaderStatus: true});
+        navigate('Auth', {screen: 'Login', params: {status: 'successfull'}});
+      }
+    }, 2000);
   });
   return <SplashScreen />;
 };

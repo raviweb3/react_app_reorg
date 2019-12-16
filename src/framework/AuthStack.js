@@ -10,6 +10,7 @@ export default AuthStack = () => {
     <Stack.Navigator initialRouteName="Login">
       <Stack.Screen name="Login" component={LoginContainer} />
       <Stack.Screen name="SignUp" component={SignupContainer} />
+      <Stack.Screen name="ResetPassword" component={SignupContainer} />
     </Stack.Navigator>
   );
 };

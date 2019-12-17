@@ -1,18 +1,18 @@
-import { useMutation } from "@apollo/react-hooks";
-import { login } from "./operations";
+import {useMutation} from "@apollo/react-hooks";
+import {login, updateProfile} from "./operations";
 
 /**
  * useLoginMutation: Wrapper function/hook, to to login into the application
- * @param variables, is an object which takes the number and password in the below format
- * variables = {
+ * doLogin function argument structure doLogin({
+    variables: {
      data: {
        loginID,
        password
       }
-  }
+  })
  * @returns {object} params, the name of the object returned from the function/hook
  * example response from below function/hook would look like this
-   {
+ {
     startApi: func,
     response: {
       loading: boolean( returns true if completed),
@@ -31,15 +31,14 @@ import { login } from "./operations";
     }
   }
  */
-function useLoginMutation(variables) {
+function useLoginMutation() {
   const params = {
-    startApi: () => {},
+    startApi: () => {
+    },
     response: {}
   };
   try {
-    const [doLogin, loginResponse] = useMutation(login, {
-      variables
-    });
+    const [doLogin, loginResponse] = useMutation(login);
     params.startApi = doLogin;
     params.response = loginResponse;
   } catch (e) {
@@ -53,4 +52,63 @@ function useLoginMutation(variables) {
   return params;
 }
 
-export { useLoginMutation };
+/**
+ * useUpdateProfileMutation: Wrapper function/hook, to to login into the application
+ * doUpdateProfile function argument structure doUpdateProfile({
+        variables: {
+          data: {
+            id: profileId,
+            firstName: fullName,
+            lastName: lastName(empty),
+            dateOfBirth: new Date(chosenDate),
+            phone: phone (from registration),
+            email: emailId,
+            status: "KYC_1_STEP_1"
+          }
+        }
+      })
+ * @returns {object} params, the name of the object returned from the function/hook
+ * example response from below function/hook would look like this
+ {
+    startApi: func,
+    response: {
+      loading: boolean( returns true if completed),
+      error: Object( we can get the message by error.message){
+        message: String
+      },
+      data: Object(response came from graphql server){
+            id
+            firstName
+            lastName
+            dateOfBirth
+            phone
+            phoneVerified
+            hashDLT
+            email
+            avatarImage
+        }
+    }
+  }
+ */
+function useUpdateProfileMutation() {
+  const params = {
+    startApi: () => {
+    },
+    response: {}
+  };
+  try {
+    const [doUpdateProfile, profileResponse] = useMutation(updateProfile);
+    params.startApi = doUpdateProfile;
+    params.response = profileResponse;
+  } catch (e) {
+    console.log("error in updateProfile hook", e.message);
+    params.response = {
+      loading: false,
+      error: e.message
+    };
+  }
+
+  return params;
+}
+
+export {useLoginMutation, useUpdateProfileMutation};

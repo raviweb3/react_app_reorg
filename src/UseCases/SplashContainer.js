@@ -12,7 +12,7 @@ const SplashContainer = ({navigation}) => {
 
   useEffect(() => {
     setTimeout(() => {
-      if (authState.loggedIn) navigation.navigate('Home');
+      if (authState.loggedIn) navigation.navigate('ApplyScreen');
       else navigation.navigate('Auth');
     }, 3000);
   });

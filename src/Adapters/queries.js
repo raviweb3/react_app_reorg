@@ -1,5 +1,5 @@
-import { useLazyQuery } from "@apollo/react-hooks";
-import { readProfile, readKYCStatus } from "./operations";
+import {useLazyQuery} from '@apollo/react-hooks';
+import {readProfile, readKYCStatus} from './operations';
 
 /**
    * useReadProfile: Wrapper function/hook to read the profile info from the server
@@ -61,22 +61,20 @@ import { readProfile, readKYCStatus } from "./operations";
   }
 **/
 
-function useReadProfileQuery(variables) {
+function useReadProfileQuery() {
   const params = {
     startApi: () => {},
-    response: {}
+    response: {},
   };
   try {
-    const [doReadProfile, profileResponse] = useLazyQuery(readProfile, {
-      variables
-    });
+    const [doReadProfile, profileResponse] = useLazyQuery(readProfile);
     params.startApi = doReadProfile;
     params.response = profileResponse;
   } catch (e) {
-    console.log("error in catch", e.message);
+    console.log('error in catch', e.message);
     params.response = {
       loading: false,
-      error: e.message
+      error: e.message,
     };
   }
 
@@ -106,21 +104,21 @@ function useReadProfileQuery(variables) {
 function useReadKYCStatusQuery() {
   const params = {
     startApi: () => {},
-    response: {}
+    response: {},
   };
   try {
     const [doReadKYCStatus, kycResponse] = useLazyQuery(readKYCStatus);
     params.startApi = doReadKYCStatus;
     params.response = kycResponse;
   } catch (e) {
-    console.log("error in catch", e.message);
+    console.log('error in catch', e.message);
     params.response = {
       loading: false,
-      error: e.message
+      error: e.message,
     };
   }
 
   return params;
 }
 
-export { useReadProfileQuery, useReadKYCStatusQuery };
+export {useReadProfileQuery, useReadKYCStatusQuery};

@@ -10,7 +10,6 @@ import {_navigation} from './NavigationService';
 const Stack = createStackNavigator();
 
 const AppNavigation = () => {
-  console.log('appnavigation');
   return (
     <NavigationNativeContainer ref={_navigation}>
       <Stack.Navigator initialRouteName="Splash" headerMode="none">

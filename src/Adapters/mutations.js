@@ -1,5 +1,5 @@
-import { useMutation } from "@apollo/react-hooks";
-import { login } from "./operations";
+import {useMutation} from '@apollo/react-hooks';
+import {login} from './operations';
 
 /**
  * useLoginMutation: Wrapper function/hook, to to login into the application
@@ -31,26 +31,24 @@ import { login } from "./operations";
     }
   }
  */
-function useLoginMutation(variables) {
+function useLoginMutation() {
   const params = {
     startApi: () => {},
-    response: {}
+    response: {},
   };
   try {
-    const [doLogin, loginResponse] = useMutation(login, {
-      variables
-    });
+    const [doLogin, loginResponse] = useMutation(login);
     params.startApi = doLogin;
     params.response = loginResponse;
   } catch (e) {
-    console.log("error in login hook", e.message);
+    console.log('error in login hook', e.message);
     params.response = {
       loading: false,
-      error: e.message
+      error: e.message,
     };
   }
 
   return params;
 }
 
-export { useLoginMutation };
+export {useLoginMutation};

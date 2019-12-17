@@ -8,11 +8,9 @@ const Tab = createBottomTabNavigator();
 
 export default BottomTabs = () => {
   return (
-    <UserProvider>
-      <Tab.Navigator initialRouteName="Home">
-        <Tab.Screen name="Home" component={HomeContainer} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-      </Tab.Navigator>
-    </UserProvider>
+    <Tab.Navigator initialRouteName="Home">
+      <Tab.Screen name="Home" component={HomeContainer} />
+      <Tab.Screen name="Settings" component={SettingsScreen} />
+    </Tab.Navigator>
   );
 };

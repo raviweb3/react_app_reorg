@@ -57,13 +57,16 @@ function useLoginMutation() {
  * doUpdateProfile function argument structure doUpdateProfile({
         variables: {
           data: {
-            id: profileId,
+            id: profileId,(mandatory)
             firstName: fullName,
             lastName: lastName(empty),
             dateOfBirth: new Date(chosenDate),
             phone: phone (from registration),
             email: emailId,
-            status: "KYC_1_STEP_1"
+            instantNotification: true,
+            marketingNotification: true,
+            avatarImage: base64 string,
+            status: "KYC_1_STEP_1(2,3,4 etc)"
           }
         }
       })

@@ -4,7 +4,7 @@ import {NavigationNativeContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import AuthStack from './AuthStack';
-import BottomTabs from './BottomTabs';
+import BottomNavigation from '../../src/navigation/BottomNavigation';
 import SplashContainer from '../UseCases/SplashContainer';
 const Stack = createStackNavigator();
 
@@ -14,7 +14,7 @@ const AppNavigation = () => {
       <Stack.Navigator initialRouteName="Splash" headerMode="none">
         <Stack.Screen name="Splash" component={SplashContainer} />
         <Stack.Screen name="Auth" component={AuthStack} />
-        <Stack.Screen name="Home" component={BottomTabs} />
+        <Stack.Screen name="ApplyScreen" component={BottomNavigation} />
       </Stack.Navigator>
     </NavigationNativeContainer>
   );

@@ -1,59 +1,64 @@
-import {createBottomTabNavigator} from 'react-navigation-tabs';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Image} from 'react-native';
-const CardsBottomNavigation = createBottomTabNavigator(
+import ApplyScreen from '../Entities/Screens/Apply/ApplyScreen';
+import CardsScreen from '../Entities/Screens/Cards/CardsScreen';
+import DashBoardScreen from '../Entities/Screens/DashBoard/DashBoardScreen';
+import OptionsScreen from '../Entities/Screens/Options/OptionsScreen';
+import styles from '../styles/BottomNavStyle';
+const BottomNavigation = createBottomTabNavigator(
     {
-      Apply: {
-        screen: Apply,
+      ApplyScreen: {
+        screen: ApplyScreen,
         navigationOptions: {
           tabBarTestID: 'applyScreen-testId'
         }
       },
-      Dashboard: {
-        screen: Dashboard,
+      DashBoardScreen: {
+        screen: DashBoardScreen,
         navigationOptions: {
           tabBarTestID: "dashboardScreen-testId"
         }
       },
-      Cards: {
-        screen: Cards,
+      CardsScreen: {
+        screen: CardsScreen,
         navigationOptions: {
           tabBarTestID: "cardsScreen-testId"
         }
       },
-      Options: {
-        screen: Options,
+      OptionsScreen: {
+        screen: OptionsScreen,
         navigationOptions: {
           tabBarTestID: "optionsScreen-testId"
         }
       }
     },
     {
-      initialRouteName: "Apply",
+      initialRouteName: "ApplyScreen",
       tabBarOptions: styles.cardsTabBarOptions,
       defaultNavigationOptions: ({ navigation }) => ({
         tabBarIcon: ({ focused }) => {
           const { routeName } = navigation.state;
           let iconName;
           switch (routeName) {
-            case "Apply":
+            case "ApplyScreen":
               iconName = focused
-                ? require("@assets/images/Apply_y.png")
-                : require("@assets/images/Apply_w.png");
+                ? require("../../assets/images/Apply_y.png")
+                : require("../../assets/images/Apply_w.png");
               break;
-            case "Dashboard":
+            case "DashBoardScreen":
               iconName = focused
-                ? require("@assets/images/Summary_y.png")
-                : require("@assets/images/Summary_w.png");
+                ? require("../../assets/images/Summary_y.png")
+                : require("../../assets/images/Summary_w.png");
               break;
-            case "Cards":
+            case "CardsScreen":
               iconName = focused
-                ? require("@assets/images/Creditcard_y.png")
-                : require("@assets/images/Creditcard_w.png");
+                ? require("../../assets/images/Creditcard_y.png")
+                : require("../../assets/images/Creditcard_w.png");
               break;
-            case "More":
+            case "OptionsScreen":
               iconName = focused
-                ? require("@assets/images/More_y.png")
-                : require("@assets/images/More_w.png");
+                ? require("../../assets/images/More_y.png")
+                : require("../../assets/images/More_w.png");
               break;
           }
   
@@ -64,5 +69,5 @@ const CardsBottomNavigation = createBottomTabNavigator(
       })
     }
   );
-  
- 
+  export default BottomNavigation;
+  //export default createAppContainer(BottomNavigation);

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import colors from '../Entities/themes/variables/colors';
+
 import {Image} from 'react-native';
 import ApplyScreen from '../Entities/Screens/Apply/ApplyScreen';
 import CardsScreen from '../Entities/Screens/Cards/CardsScreen';
@@ -12,25 +13,19 @@ const Tab = createBottomTabNavigator();
 
 
 export default BottomNavigation = () => {
-  let applyCard_active = require("../../assets/images/Apply_y.png");
-  let applyCard_inactive = require("../../assets/images/Apply_w.png");
-  let dashboard_active = require("../../assets/images/Summary_y.png");
-  let dashboard_inactive = require("../../assets/images/Summary_w.png");
-  let card_active = require("../../assets/images/Creditcard_y.png");
-  let card_inactive = require("../../assets/images/Creditcard_w.png");
-  let options_active = require("../../assets/images/More_y.png");
-  let options_inactive = require("../../assets/images/More_w.png");
+  let applyCard_active = require("../../assets/images/apply_active.png");
+  let applyCard_inactive = require("../../assets/images/apply_inactive.png");
+  let dashboard_active = require("../../assets/images/dashboard_active.png");
+  let dashboard_inactive = require("../../assets/images/dashboard_inactive.png");
+  let card_active = require("../../assets/images/cards_active.png");
+  let card_inactive = require("../../assets/images/cards_inactive.png");
+  let options_active = require("../../assets/images/options_active.png");
+  let options_inactive = require("../../assets/images/options_inactive.png");
   
   return (
     <Tab.Navigator
       initialRouteName="ApplyScreen"
-      tabBarOptions={{
-        activeTintColor: colors.saffron,
-        activeBackgroundColor:colors.black,
-        inactiveTintColor: colors.white,
-        inactiveBackgroundColor:colors.black
-        
-      }}
+      tabBarOptions=  {styles.tabBarStyle}
     >
       <Tab.Screen
         name="ApplyScreen"
@@ -41,7 +36,7 @@ export default BottomNavigation = () => {
             focused ?
               <Image source={applyCard_active} style={styles.navBottomIcons} /> :
               <Image source={applyCard_inactive} style={styles.navBottomIcons} />
-          ),
+          )
         }}
       />
       <Tab.Screen

@@ -31,6 +31,7 @@
     "babel-eslint": "^10.0.3",
     "babel-polyfill": "^6.26.0",
     "babel-register": "^6.26.0",
+    "eslint-plugin-disable": "^1.0.5",
     "graphql": "^14.5.8",
     "graphql-cli": "^3.0.14",
     "graphql-tag": "^2.10.1",
@@ -63,5 +64,10 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
   }
 }

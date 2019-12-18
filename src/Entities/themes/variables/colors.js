@@ -1,4 +1,5 @@
 const colors = {
+  bottomGrey : "#808588",
   darkWhiteSmoke: "#edebed",
   black: "#000",
   lightWhiteSmoke: "#f5f4f5",
@@ -10,7 +11,7 @@ const colors = {
   silver: "#b5b5b5",
   veryLightGrey: "#c9c9c9",
   pacificBlue: "#039BE5",
-  saffron: "#fad961",
+  saffron: "#f6ba26",
   blanchedAlmond: "#fff2ccff",
   heliotrope: "#BA77FF",
   orchid: "#D667CD",

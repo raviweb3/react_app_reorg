@@ -1,55 +1,41 @@
 import colors from "../Entities/themes/variables/colors";
+import fonts from "../Entities/themes/variables/fonts";
 
 export default {
-  tabBarOptions: {
-    activeTintColor: colors.black,
-    inactiveTintColor: colors.gray,
-    style: {
-      backgroundColor: colors.saffron,
-      justifyContent: "center",
-      alignSelf: "center",
-      borderWidth: 1,
-      borderColor: colors.grey
-    },
-    titleStyle: {
-      justifyContent: "center",
-      alignItems: "center"
-    },
-    labelStyle: {
-      fontSize: 14,
-      textAlign: "center",
-      alignSelf: "center"
-    }
-  },
-  cardsTabBarOptions: {
-    borderTopColor: colors.saffron,
+  tabBarStyle:{
+    
     activeTintColor: colors.saffron,
-    inactiveTintColor: colors.white,
+    activeBackgroundColor:colors.black,
+    inactiveTintColor: colors.bottomGrey,
+    inactiveBackgroundColor:colors.black,
     style: {
-      paddingTop: 10,
-      backgroundColor: colors.black,
-      justifyContent: "center",
-      alignSelf: "center",
-      borderWidth: 1,
-      borderColor: colors.black
-    },
-    titleStyle: {
-      justifyContent: "center",
-      alignItems: "center"
+      height: 76
+      },
+      tabStyle:{
+        borderTopColor: colors.saffron,
+        borderWidth: 4
+      },
+      titleStyle: {
+       justifyContent: "center",
+        alignItems: "center",
+        letterSpacing:0
     },
     labelStyle: {
+      paddingTop:1,
       fontSize: 10,
       textAlign: "center",
-      alignSelf: "center"
-      // fontFamily: fonts.MontserratMedium,
+      alignSelf: "center",
+      marginTop: 0,
+      fontFamily: fonts.FiraSansRegular,
     }
+    
   },
 
   navBottomIcons: {
-    width: 25,
-    height: 25,
+    width: 26,
+    height: 26,
     resizeMode: "contain",
-    marginBottom: 5,
-    marginTop: 5,
+    paddingBottom: 0.8
   }
 };
+

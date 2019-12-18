@@ -1,8 +1,9 @@
 import * as React from 'react';
 import {View} from 'react-native';
+import BrandCard from './BrandCard'
 const ApplyScreen = () =>{
   return (
-    <View style={{backgroundColor:'black'}}/>
+    <BrandCard/>
   );
 }
 export default ApplyScreen;

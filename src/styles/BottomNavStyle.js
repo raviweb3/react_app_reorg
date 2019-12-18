@@ -3,7 +3,6 @@ import fonts from "../Entities/themes/variables/fonts";
 
 export default {
   tabBarStyle:{
-    
     activeTintColor: colors.saffron,
     activeBackgroundColor:colors.black,
     inactiveTintColor: colors.bottomGrey,

@@ -1,4 +1,5 @@
 const colors = {
+  lineDivider: "#f2f2f2",
   bottomGrey : "#808588",
   darkWhiteSmoke: "#edebed",
   black: "#000",

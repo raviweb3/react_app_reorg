@@ -14,7 +14,7 @@ const SplashContainer = ({navigation}) => {
     setTimeout(() => {
       if (authState.loggedIn) navigation.navigate('ApplyScreen');
       else navigation.navigate('ApplyScreen');
-    }, 3000);
+    }, 1000);
   });
   return <SplashScreen />;
 };

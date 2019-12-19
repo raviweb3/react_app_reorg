@@ -1,0 +1,166 @@
+[
+   {
+       "id": "5dc30bc446e0fb0007b6dd8f",
+       "categoryName": "Cafes",
+       "categoryColor": "#ff7b00",
+       "brandCount": 10,
+       "brandsInfo":[
+           {
+            "id": "5dc30bc546e0fb0007b6dd97",
+            "name": "Pizza Hut",
+            "brandName": "Pizza Hut",
+            "brandLogoUrl": "brand_pizzahut",
+            "brandCardUrl": "category_card_background-food",
+            "backgroundPublicId": "category_background-grocery"
+            },{
+                "id": "5dc30bc546e0fb0007b6dd98",
+                "name": "Tesco",
+                "brandName": "Tesco",
+                "brandLogoUrl": "brand_tesco",
+                "brandCardUrl": "category_card_background-grocery",
+                "backgroundPublicId": "category_background-grocery"
+            },
+            {
+                "name": "Decathlon",
+                "brandName": "Decathlon",
+                "brandLogoUrl": "brand_decathlon",
+                "brandCardUrl": "category_card_background-sports",
+                "backgroundPublicId": "category_background-grocery"
+            }, {
+                "name": "Decathlon",
+                "brandName": "Decathlon",
+                "brandLogoUrl": "brand_decathlon",
+                "brandCardUrl": "category_card_background-sports",
+                "backgroundPublicId": "category_background-grocery"
+            },
+            {
+                "name": "Decathlon",
+                "brandName": "Decathlon",
+                "brandLogoUrl": "brand_decathlon",
+                "brandCardUrl": "category_card_background-sports",
+                "backgroundPublicId": "category_background-grocery"
+            },
+            {
+                "name": "Decathlon",
+                "brandName": "Decathlon",
+                "brandLogoUrl": "brand_decathlon",
+                "brandCardUrl": "category_card_background-sports",
+                "backgroundPublicId": "category_background-grocery"
+            },
+            {
+                "name": "Decathlon",
+                "brandName": "Decathlon",
+                "brandLogoUrl": "brand_decathlon",
+                "brandCardUrl": "category_card_background-sports",
+                "backgroundPublicId": "category_background-grocery"
+            }
+
+       ]
+   },
+   {
+    "id": "5dc30bc446e0fb0007b6dd8f",
+    "categoryName": "Restaurants",
+    "categoryColor": "#e46b6b",
+    "brandCount": 5,
+    "brandsInfo":[
+        {
+         "id": "5dc30bc546e0fb0007b6dd97",
+         "name": "Pizza Hut",
+         "brandName": "Pizza Hut",
+         "brandLogoUrl": "brand_pizzahut",
+         "brandCardUrl": "category_card_background-food",
+         "backgroundPublicId": "category_background-grocery"
+         },{
+             "id": "5dc30bc546e0fb0007b6dd98",
+             "name": "Tesco",
+             "brandName": "Tesco",
+             "brandLogoUrl": "brand_tesco",
+             "brandCardUrl": "category_card_background-grocery",
+             "backgroundPublicId": "category_background-grocery"
+         },
+         {
+             "name": "Decathlon",
+             "brandName": "Decathlon",
+             "brandLogoUrl": "brand_decathlon",
+             "brandCardUrl": "category_card_background-sports",
+             "backgroundPublicId": "category_background-grocery"
+         }
+
+    ]
+},
+{
+    "id": "5dc30bc44236e0fb0007b6dd8f",
+    "categoryName": "Sports",
+    "categoryColor": "#c279eb",
+    "brandCount": 3,
+    "brandsInfo":[
+        {
+         "id": "5dc30bc512346e0fb0007b6dd97",
+         "name": "Pizza Hut",
+         "brandName": "Pizza Hut",
+         "brandLogoUrl": "brand_pizzahut",
+         "brandCardUrl": "category_card_background-food",
+         "backgroundPublicId": "category_background-grocery"
+         },{
+             "id": "5dc30123bc546e0fb0007b6dd98",
+             "name": "Tesco",
+             "brandName": "Tesco",
+             "brandLogoUrl": "brand_tesco",
+             "brandCardUrl": "category_card_background-grocery",
+             "backgroundPublicId": "category_background-grocery"
+         },
+         {
+             "name": "Decathlon",
+             "brandName": "Decathlon",
+             "brandLogoUrl": "brand_decathlon",
+             "brandCardUrl": "category_card_background-sports",
+             "backgroundPublicId": "category_background-grocery"
+         },
+         {
+            "name": "Decathlon",
+            "brandName": "Decathlon",
+            "brandLogoUrl": "brand_decathlon",
+            "brandCardUrl": "category_card_background-sports",
+            "backgroundPublicId": "category_background-grocery"
+        },
+        {
+            "name": "Decathlon",
+            "brandName": "Decathlon",
+            "brandLogoUrl": "brand_decathlon",
+            "brandCardUrl": "category_card_background-sports",
+            "backgroundPublicId": "category_background-grocery"
+        },
+        {
+            "name": "Decathlon",
+            "brandName": "Decathlon",
+            "brandLogoUrl": "brand_decathlon",
+            "brandCardUrl": "category_card_background-sports",
+            "backgroundPublicId": "category_background-grocery"
+        },
+        {
+            "name": "Decathlon",
+            "brandName": "Decathlon",
+            "brandLogoUrl": "brand_decathlon",
+            "brandCardUrl": "category_card_background-sports",
+            "backgroundPublicId": "category_background-grocery"
+        },
+        {
+            "name": "Decathlon",
+            "brandName": "Decathlon",
+            "brandLogoUrl": "brand_decathlon",
+            "brandCardUrl": "category_card_background-sports",
+            "backgroundPublicId": "category_background-grocery"
+        },
+        {
+            "name": "Decathlon",
+            "brandName": "Decathlon",
+            "brandLogoUrl": "brand_decathlon",
+            "brandCardUrl": "category_card_background-sports",
+            "backgroundPublicId": "category_background-grocery"
+        }
+
+    ]
+}
+  
+]
+   

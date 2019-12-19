@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import colors from '../../Entities/themes/variables/colors'
-export default StyleSheet.create({
+const buttonStyle = StyleSheet.create({
     applyBtn:{
         width: 69,
         height:24,
@@ -22,3 +22,21 @@ export default StyleSheet.create({
         borderWidth: 1
     }
 });
+
+const applyCardButton = function(width,height,marginLeft){
+    return{
+        width: width,
+        height: height,
+        borderRadius:5,
+        marginBottom: 30,
+        marginTop: 57,
+        marginLeft: marginLeft,
+        borderColor: colors.white,
+        borderWidth: 1
+    }
+}
+
+export {
+    buttonStyle,
+    applyCardButton
+}

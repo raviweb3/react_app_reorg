@@ -1,27 +1,27 @@
 import * as React from 'react';
 import {View,ImageBackground,Image,Text} from 'react-native';
-import  viewStyle from '../../../styles/componentStyle/viewStyle';
-import  buttonStyle from '../../../styles/componentStyle/buttonStyle';
-import  textStyle from '../../../styles/componentStyle/textStyle';
+import  {viewStyle} from '../../../styles/componentStyle/viewStyle';
+import   { applyCardButton ,buttonStyle} from '../../../styles/componentStyle/buttonStyle';
+import  {textStyle,applyCardTxt} from '../../../styles/componentStyle/textStyle';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import GiftImageComponent from '../../../../assets/images/GiftImageComponent';
 import ApplyCardComponent from '../../../../assets/images/ApplyCardComponent';
 const BrandCard = () =>{
   return (
-      <View>
+      <View style={{marginTop:20,marginRight:10}}>
       <ImageBackground source={require('../../../../assets/images/coffeeCards.png')} style={viewStyle.cardContainer}>
-         <View style={[viewStyle.cardContainer, viewStyle.flex_row]}>
-            <TouchableOpacity style={buttonStyle.applyBtn}>
+         <View style={[viewStyle.cardContainer,  viewStyle.flex_row]}>
+            <TouchableOpacity style={applyCardButton(69,24,86)}>
                  <View style={viewStyle.cardFull}>
                       <GiftImageComponent />
-                      <Text style={textStyle.giftTxt}>{"Gift"}</Text>
+                      <Text style={applyCardTxt(20,14,2)}>{"Gift"}</Text>
                  </View>
           
             </TouchableOpacity>
             <TouchableOpacity style={buttonStyle.giftBtn}>
             <View style={viewStyle.cardFull}>
                       <ApplyCardComponent/>
-                      <Text style={textStyle.applyTxt}>{"Apply"}</Text>
+                      <Text style={applyCardTxt(31,17,0.9)}>{"Apply"}</Text>
                   </View>
            </TouchableOpacity>
          </View>

@@ -5,12 +5,14 @@ class LoginScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      password: '',
+      phoneNumber: '9876543210',
+      countryCode: '44',
+      countryCCA2: '',
+      password: '123456',
     };
   }
   render() {
-    const {username, password} = this.state;
+    const {phoneNumber, password, countryCode, countryCCA2} = this.state;
     const {handleLogin, handleSignUp} = this.props;
     return (
       <View style={styles.container}>
@@ -26,7 +28,9 @@ class LoginScreen extends Component {
         />
         <Button
           title="Login"
-          onPress={() => handleLogin(username, password)}
+          onPress={() =>
+            handleLogin(phoneNumber, password, countryCode, countryCCA2)
+          }
           color="white"
         />
         <Button title="Signup" onPress={handleSignUp} color="white" />

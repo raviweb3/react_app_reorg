@@ -164,15 +164,13 @@ function useReadKYCStatusQuery() {
   }
  **/
 
-function useReadCategoriesQuery(variables) {
+function useReadCategoriesQuery() {
   const params = {
     startApi: () => {},
     response: {},
   };
   try {
-    const [doReadCategory, categoryResponse] = useLazyQuery(readCategory, {
-      variables,
-    });
+    const [doReadCategory, categoryResponse] = useLazyQuery(readCategory);
     params.startApi = doReadCategory;
     params.response = categoryResponse;
   } catch (e) {

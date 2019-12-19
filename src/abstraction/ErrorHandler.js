@@ -1,14 +1,22 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React, {useContext, useEffect} from 'react';
+import {View, Text, Alert} from 'react-native';
 
 const ErrorHandler = () => {
-  const [errorState] = React.useContext(ErrorContext);
+  const [errorState] = useContext(ErrorContext);
+  const [loaderState, dispatch] = React.useContext(LoaderContext);
 
-  return (
-    <View>
-      <Text></Text>
-    </View>
-  );
+  useEffect(() => {
+    console.log(errorState);
+    dispatch({type: 'handleLoader', payload: false});
+    Alert.alert(
+      'Alert Title',
+      `Alert msg - ${errorState.errorMessage}`,
+      {text: 'OK', onPress: () => console.log('OK Pressed')},
+
+      {cancelable: false},
+    );
+  }, [errorState]);
+  return null;
 };
 
 export default ErrorHandler;

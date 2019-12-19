@@ -2,8 +2,7 @@ import * as React from 'react';
 
 const _navigation = React.createRef();
 
-const navigate = (name, params) => {
-  console.log(_navigation);
+const navigate = (name, params = {}) => {
   _navigation.current && _navigation.current.navigate(name, params);
 };
 

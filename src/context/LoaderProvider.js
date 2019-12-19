@@ -1,5 +1,6 @@
 import React, {useReducer, useMemo} from 'react';
 import PropTypes from 'prop-types';
+import loaderReducer from '../reducers/loaderReducer';
 
 const initialState = {
   loaderStatus: false,
@@ -14,8 +15,8 @@ const updater = (state, update) => {
 };
 
 export function LoaderProvider(props) {
-  const [loaderState, updateLoader] = useReducer(updater, initialState);
-  const value = useMemo(() => [loaderState, updateLoader], [loaderState]);
+  const [loaderState, dispatch] = useReducer(loaderReducer, initialState);
+  const value = useMemo(() => [loaderState, dispatch], [loaderState]);
 
   return (
     <LoaderContext.Provider value={value}>

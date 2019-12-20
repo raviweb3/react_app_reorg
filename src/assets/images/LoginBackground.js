@@ -9,7 +9,7 @@ import Svg, {
   Use,
 } from 'react-native-svg'
 
-const ImageSignInComponent = props => (
+const LoginBackground = props => (
   <Svg width={360} height={272} viewBox="0 0 360 272" {...props}>
     <Defs>
       <Path id="a" d="M0 0h360v277.44H0z" />
@@ -236,4 +236,4 @@ const ImageSignInComponent = props => (
   </Svg>
 )
 
-export default ImageSignInComponent
+export default LoginBackground

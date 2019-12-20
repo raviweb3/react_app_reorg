@@ -42,6 +42,7 @@
     "react-native-remote-svg": "^2.0.6",
     "react-native-safe-area-context": "^0.6.1",
     "react-native-screens": "^1.0.0-alpha.23",
+    "react-native-step-indicator": "0.0.11",
     "react-native-svg": "^9.13.6",
     "subscriptions-transport-ws": "0.9.16"
   },
@@ -59,6 +60,8 @@
     "preset": "react-native"
   },
   "rnpm": {
-    "assets": ["./src/assets/fonts/Fira_Sans"]
-   }
+    "assets": [
+      "./src/assets/fonts/Fira_Sans"
+    ]
+  }
 }

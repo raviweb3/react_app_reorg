@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import LoginScreen from '../Entities/Login/LoginScreen';
 import {AuthContext} from '../context/AuthProvider';
 import {UserContext} from '../context/userProvider';
+import SignupScreen from '../Entities/Signup/SignupScreen';
 const LoginContainer = ({navigation}) => {
   const [authState, updateAuth] = React.useContext(AuthContext);
   const [userState, updateUser] = React.useContext(UserContext);
@@ -28,6 +29,6 @@ const LoginContainer = ({navigation}) => {
     navigation.navigate('SignUp');
   };
 
-  return <LoginScreen handleLogin={handleLogin} handleSignUp={handleSignUp} />;
+  return <SignupScreen handleLogin={handleLogin} handleSignUp={handleSignUp} />;
 };
 export default LoginContainer;

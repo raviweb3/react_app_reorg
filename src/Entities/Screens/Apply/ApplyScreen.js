@@ -1,19 +1,25 @@
 import * as React from 'react';
-import {View,SafeAreaView,FlatList,Text} from 'react-native';
+import {View,FlatList,Text} from 'react-native';
 import data from '../Apply/CategoryBrandInfo.json'
 import BrandCard from './BrandCard';
 import colors from '../../themes/variables/colors'
 import {viewStyle,categoryDotView} from '../../../styles/componentStyle/viewStyle';
 import {textStyle} from '../../../styles/componentStyle/textStyle';
+import CommonStatusBar from '../../CustomComponent/CommonStatusBar'
+import CommonHeader from '../../CustomComponent/CommonHeader';
+import BaseContainer from '../../CustomComponent/BaseContainer';
+
  export default function ApplyScreen() {
     return (
-      <SafeAreaView style={viewStyle.card_flex}>
+      <BaseContainer>
+      <CommonHeader title="KARMA" leftIconName="arrow-back" ></CommonHeader>
+      <CommonStatusBar title="Apply" rightIcon='ios-search' statusBarColor={colors.black}/>
         <FlatList
           data={data}
           renderItem={({ item }) => <CategoryComponent title={item} />}
           keyExtractor={item => item.id}
         />
-      </SafeAreaView>
+      </BaseContainer>
     );
   }
   function CategoryComponent({ title }) {
@@ -35,7 +41,7 @@ import {textStyle} from '../../../styles/componentStyle/textStyle';
         </View>
         
      </View>
-     <View style={{height:1,backgroundColor:colors.grey,opacity: 0.2,marginTop: 5}}></View>
+     <View style={{height:1,backgroundColor:colors.grey,opacity: 0.2}}></View>
      </View>
     );
   }

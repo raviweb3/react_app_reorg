@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import colors from '../../Entities/themes/variables/colors';
-import fonts from '../../Entities/themes/variables/fonts';
+import {widthPercentageToDP,heightPercentageToDP} from '../pxDimensions';
 const viewStyle =  StyleSheet.create({
     cardContainer:{
         width: 265,
@@ -27,13 +27,18 @@ const viewStyle =  StyleSheet.create({
       },
      categoryView:{
             paddingLeft: 26.9,
-            paddingTop: 20,
-            paddingBottom: 25,
+            paddingTop: 10,
+            paddingBottom: 20,
             marginVertical: 8
            
      }  
 });
-
+const applyContainer = function(width,height){
+    return{
+        width: widthPercentageToDP(width),
+        height: heightPercentageToDP(height)
+    }
+}
 const categoryDotView = function(backgroundColor){
     return{
         width: 12,
@@ -43,4 +48,4 @@ const categoryDotView = function(backgroundColor){
     }
 }
 
-export {viewStyle,categoryDotView};
+export {viewStyle,categoryDotView,applyContainer};

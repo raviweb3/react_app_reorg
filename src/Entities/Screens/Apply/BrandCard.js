@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {View,ImageBackground,Image,Text} from 'react-native';
-import  {viewStyle} from '../../../styles/componentStyle/viewStyle';
+import  {viewStyle,applyContainer} from '../../../styles/componentStyle/viewStyle';
 import   { applyCardButton ,buttonStyle} from '../../../styles/componentStyle/buttonStyle';
 import  {textStyle,applyCardTxt} from '../../../styles/componentStyle/textStyle';
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -8,9 +8,9 @@ import GiftImageComponent from '../../../../assets/images/GiftImageComponent';
 import ApplyCardComponent from '../../../../assets/images/ApplyCardComponent';
 const BrandCard = () =>{
   return (
-      <View style={{marginTop:20,marginRight:10}}>
+      <View style={{marginTop:15,marginRight:10}}>
       <ImageBackground source={require('../../../../assets/images/coffeeCards.png')} style={viewStyle.cardContainer}>
-         <View style={[viewStyle.cardContainer,  viewStyle.flex_row]}>
+         <View style={[applyContainer("71%","14%"),  viewStyle.flex_row]}>
             <TouchableOpacity style={applyCardButton(69,24,86)}>
                  <View style={viewStyle.cardFull}>
                       <GiftImageComponent />

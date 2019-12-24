@@ -12,8 +12,8 @@ const SplashContainer = ({navigation}) => {
 
   useEffect(() => {
     setTimeout(() => {
-      if (authState.loggedIn) navigation.navigate('ApplyScreen');
-      else navigation.navigate('ApplyScreen');
+      if (authState.loggedIn) navigation.navigate('ApplyContainer');
+      else navigation.navigate('ApplyContainer');
     }, 1000);
   });
   return <SplashScreen />;

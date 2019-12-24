@@ -9,20 +9,23 @@ import CommonStatusBar from '../../CustomComponent/CommonStatusBar'
 import CommonHeader from '../../CustomComponent/CommonHeader';
 import BaseContainer from '../../CustomComponent/BaseContainer';
 
- export default function ApplyScreen() {
+ export default function ApplyScreen(props) {
+    const {brandData,searchBrand,brandSelected} = props;
     return (
       <BaseContainer>
-      <CommonHeader title="KARMA" leftIconName="arrow-back" ></CommonHeader>
-      <CommonStatusBar title="Apply" rightIcon='ios-search' statusBarColor={colors.black}/>
+      <CommonHeader/>
+      <CommonStatusBar title="Apply" rightIcon='search' onPressRightBtn={searchBrand}/>
         <FlatList
-          data={data}
-          renderItem={({ item }) => <CategoryComponent title={item} />}
+          data={brandData}
+          renderItem={({ item }) => <CategoryComponent title={item} brandClicked={brandSelected}/>}
           keyExtractor={item => item.id}
+          ListEmptyComponent={<EmptyContainer/>}
         />
       </BaseContainer>
     );
+    
   }
-  function CategoryComponent({ title }) {
+  function CategoryComponent({ title,brandClicked}) {
     return (
       <View>
       <View style={viewStyle.categoryView}>
@@ -35,7 +38,7 @@ import BaseContainer from '../../CustomComponent/BaseContainer';
                     data={title.brandsInfo}
                     keyExtractor={item => item.id}
                     renderItem={({item}) => 
-                              <BrandCard/>
+                              <BrandCard brandInfo={item} brand_pressed={brandClicked}/>
                                }>
            </FlatList>
         </View>
@@ -45,5 +48,13 @@ import BaseContainer from '../../CustomComponent/BaseContainer';
      </View>
     );
   }
+function EmptyContainer(){
+  return (
+    <View>
+      <Text>{"No Data Found"}</Text>
+    </View>
+  );
+}
+function GetBrandInfo(){
 
-  
+}

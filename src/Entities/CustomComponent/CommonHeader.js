@@ -4,21 +4,24 @@ import colors from '../themes/variables/colors';
 import fonts from '../themes/variables/fonts';
 import { Header, Title, Button, Left, Right, Body, Icon } from "native-base";
 import PropTypes from "prop-types";
+import KarmaLogo from '../../../assets/images/KarmaLogo'
 function CommonHeader(props) {
   
     const {
+      headerBgColor,
       leftIconName,
       title,
       onPressLeftBtn,
       iosLeftIconName,
       androidLeftIconName,
       leftIconType,
+      centerLogo,
       children
     } = props;
     return (
-      <Header style={styles.container}>
-        <Left style={styles.leftSegment}>
-          {leftIconName || iosLeftIconName || androidLeftIconName || title ?  (
+      <Header style={{backgroundColor: headerBgColor || colors.black}} iosBarStyle={"light-content"} androidStatusBarColor={headerBgColor || colors.black}>
+        <Left style={{flex:1}} >
+          {leftIconName || iosLeftIconName || androidLeftIconName ?  (
             <Button
               transparent
               style={styles.buttonStyle}
@@ -34,14 +37,28 @@ function CommonHeader(props) {
                <Title
               style={styles.headerTitle}
             >
-              {`${title}`.toUpperCase()}
+              {`${title}`}
             </Title>
             </Button>
-          ) : null}
+          ) : (
+            <Button
+              transparent
+            >
+              <KarmaLogo style={styles.iconStyle}/>
+               <Title
+              style={styles.karmaTitle}
+            >
+              {'KARMA'}
+            </Title>
+            </Button>
+          ) }
         </Left>
-        <Body>
+        <Body style={{flex:1}}>
+     {
+       centerLogo ? (<Button transparent><KarmaLogo/></Button>) : null
+     }
         </Body>
-        <Right>
+        <Right style={{flex:1}}>
         </Right>
       </Header>
     );
@@ -54,13 +71,18 @@ CommonHeader.propTypes = {
   onPressLeftBtn: PropTypes.func,
 };
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.black
-  },
   headerTitle: {
-    width: 70,
+    width: 60,
     color: colors.white,
-    // alignSelf: "flex-start",
+    alignSelf: "center",
+    fontFamily: fonts.FiraSansRegular,
+    fontSize: 17,
+    letterSpacing: 2.11
+  },
+  karmaTitle: {
+    width: 80,
+    color: colors.white,
+    alignSelf: "center",
     fontFamily: fonts.FiraSansRegular,
     fontSize: 17,
     letterSpacing: 2.11
@@ -68,17 +90,17 @@ const styles = StyleSheet.create({
   titleBody: {
     flex: 5
   },
-  leftSegment: {
-    flex: 1
-  },
   buttonStyle: {
-    marginLeft: 8,
-    marginRight:4,
-    height: 50,
-    width: 50
+    marginLeft: 4,
+    marginRight:1,
+    height: 75,
+    width: 70
   },
   iconStyle: {
-    fontSize: 16
+    color: colors.saffron,
+    fontSize: 23,
+    marginLeft: 15,
+    marginRight: 6.7
   }
 });
 

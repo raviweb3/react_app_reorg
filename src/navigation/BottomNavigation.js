@@ -3,6 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import colors from '../Entities/themes/variables/colors';
 
 import {Image} from 'react-native';
+import ApplyContainer from '../UseCases/ApplyContainer';
 import ApplyScreen from '../Entities/Screens/Apply/ApplyScreen';
 import CardsScreen from '../Entities/Screens/Cards/CardsScreen';
 import DashBoardScreen from '../Entities/Screens/DashBoard/DashBoardScreen';
@@ -24,12 +25,12 @@ export default BottomNavigation = () => {
   
   return (
     <Tab.Navigator
-      initialRouteName="ApplyScreen"
+      initialRouteName="ApplyContainer"
       tabBarOptions=  {styles.tabBarStyle}
     >
       <Tab.Screen
-        name="ApplyScreen"
-        component={ApplyScreen}
+        name="ApplyContainer"
+        component={ApplyContainer}
         options={{
           tabBarLabel: 'Apply',
           tabBarIcon: ({focused }) => (

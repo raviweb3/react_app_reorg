@@ -14,7 +14,7 @@ const AppNavigation = () => {
       <Stack.Navigator initialRouteName="Splash" headerMode="none">
         <Stack.Screen name="Splash" component={SplashContainer} />
         <Stack.Screen name="Auth" component={AuthStack} />
-        <Stack.Screen name="ApplyScreen" component={BottomNavigation} />
+        <Stack.Screen name="ApplyContainer" component={BottomNavigation} />
       </Stack.Navigator>
     </NavigationNativeContainer>
   );
